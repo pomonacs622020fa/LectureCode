@@ -18,11 +18,17 @@ public class BasicCard {
 	
 	void cheat(){
 		number = 1; // ACE!
+		
+		if( number > 2) {
+			
+		}
 	}
 	
 	public static void main(String args[]){
-		BasicCard card1 = new BasicCard(10, "hearts");
+		BasicCard card1 = new BasicCard(1000, "banana");
 		BasicCard card2 = new BasicCard(2, "clubs");
+		
+		//BasicCard card = 
 		
 		System.out.println("Card1: " + card1.getNumber() + " of " + card1.getSuit());
 		System.out.println("Card2: " + card2.getNumber() + " of " + card2.getSuit());
