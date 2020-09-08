@@ -1,0 +1,30 @@
+Name		Grade
+----------------------------
+Hadi	D-
+Jett	A
+Irmak	B+
+Jan	D
+Ruby	C-
+Salih	D-
+Alex	C-
+Michelle	A+
+Aidan	C-
+Nathaniel	A
+Alan	B-
+Jordan	C+
+Indiana	A+
+Gabriel	B-
+Lucky	B
+Millie	A-
+Siddharth	C-
+Sam N.	C+
+Sean	D-
+Sam S.	C-
+Sarah	F-
+Gleb	F
+Victoria	D-
+Joe	F-
+Tai	F
+Ziang	F
+Stephanie	C
+Sadie	F
