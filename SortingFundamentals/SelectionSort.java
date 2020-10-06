@@ -8,14 +8,14 @@ public class SelectionSort {
      * unsorted subarray. 2. Repeat 1. Find the smallest element in the unsorted
      * subarray. 2. Swap it with the leftmost unsorted element. 3. Shift subarray
      * boundaries one to the right.
-     * 
+     *
      * @param students
      */
-    public static void SelectionSort(Student[] students) {
+    public static void Sort(Student[] students) {
         for (int i = 0; i < students.length; i++) {
             int indexOfMin = i;
             for (int j = i + 1; j < students.length; j++) {
-                if (students[j] < students[i]) {
+                if (students[j].compareTo(students[i]) < 0) {
 
                 }
             }
@@ -37,7 +37,7 @@ public class SelectionSort {
             System.out.println(studentArray[i]);
         }
 
-        SelectionSort(studentArray);
+        Sort(studentArray);
 
         System.out.println();
 
