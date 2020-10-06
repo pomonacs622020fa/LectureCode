@@ -1,22 +1,22 @@
+import java.util.UUID;
+
 /**
  * Student
  */
 public class Student implements Comparable<Student> {
 
-    private String firstName;
-    private String lastName;
+    UUID uuid;
     private int idNumber;
     private static int ID_NUMBER = 0;
 
-    public Student(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Student(UUID uuid) {
+        this.uuid = uuid;
         this.idNumber = ID_NUMBER;
         ID_NUMBER++;
     }
 
     public String toString() {
-        return lastName + ", " + firstName + " (" + idNumber + ")";
+        return uuid + " (" + idNumber + ")";
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Student implements Comparable<Student> {
         // Return 0 if they are equal
         // Return >=1 if this is greater than that
         // Return <=-1 if this is less than that
-        // return this.lastName.compareTo(that.lastName);
-        return that.firstName.compareTo(this.firstName);
+        // return this.idNumber - that.idNumber;
+        return this.uuid.compareTo(that.uuid);
     }
 }
