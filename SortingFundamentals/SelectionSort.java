@@ -15,12 +15,14 @@ public class SelectionSort {
         for (int i = 0; i < students.length; i++) {
             int indexOfMin = i;
             for (int j = i + 1; j < students.length; j++) {
-                if (students[j].compareTo(students[i]) < 0) {
-
+                if (students[j].compareTo(students[indexOfMin]) < 0) {
+                    indexOfMin = j;
                 }
             }
+            Student temp = students[i];
+            students[i] = students[indexOfMin];
+            students[indexOfMin] = temp;
         }
-
     }
 
     public static void main(String[] args) {
