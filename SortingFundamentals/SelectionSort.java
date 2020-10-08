@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -36,10 +37,12 @@ public class SelectionSort {
 
     public static void main(String[] args) {
 
+        Random r = new Random();
+
         ArrayList<Student> students = new ArrayList<Student>();
         int numStudents = 10;
         for (int i = 0; i < numStudents; i++) {
-            students.add(new Student(UUID.randomUUID()));
+            students.add(new Student(UUID.randomUUID(), r));
             System.out.println(students.get(i));
         }
 
