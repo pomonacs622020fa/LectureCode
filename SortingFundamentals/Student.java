@@ -24,6 +24,6 @@ public class Student implements Comparable<Student> {
         // Return 0 if they are equal
         // Return >=1 if this is greater than that
         // Return <=-1 if this is less than that
-        return this.uuid.compareTo(that.uuid);
+        return this.uuid.toString().compareTo(that.uuid.toString());
     }
 }
