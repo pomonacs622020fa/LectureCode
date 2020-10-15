@@ -49,12 +49,11 @@ public class MergeSort {
         sort(array, auxiliary, 0, array.length - 1);
     }
 
-    public static void main(String[] args) {
-
+    public static void stabilityExample() {
         String[] randomNames = { "Marnie Coil", "Calandra Goll", "Floria Radley", "Zaida Carty", "Sherry Riesgo",
                 "Eldon Plain", "Flavia Aceto", "Jacqualine Montes", "Deandrea Preciado", "Laurie Keech",
-                "Chantal Corzine", "Kassandra Wiley", "Elba Haase", "Elli Warburton", "Caron Charney", "Sophie Gamino",
-                "Gordon Feuerstein", "Mandi Burroughs", "Roselle Mcquillen", "Garland Kroeger" };
+                "Chantal Corzine", "Kassandra Wiley", "Elba Coil", "Elli Warburton", "Caron Charney", "Sophie Gamino",
+                "Gordon Feuerstein", "Mandi Coil", "Roselle Mcquillen", "Garland Kroeger" };
 
         Student2[] students = new Student2[randomNames.length];
         for (int i = 0; i < students.length; i++) {
@@ -64,11 +63,18 @@ public class MergeSort {
         }
 
         // Student2.sortByFirst();
+        // sort(students);
+        // Student2.sortByLast();
         sort(students);
 
         System.out.println();
         for (Student2 student : students) {
             System.out.println(student);
         }
+    }
+
+    public static void main(String[] args) {
+        String[] characters = "MergeSort".toLowerCase().split("");
+        sort(characters);
     }
 }
