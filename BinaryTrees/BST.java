@@ -168,5 +168,9 @@ public class BST<Key extends Comparable<Key>, Value> {
         // Test deleting root
         tree.delete(46);
         System.out.print("\nAfter deleting 34:\n" + tree);
+
+        BST<NotComparable, String> bst2 = new BST<>();
+        bst2.put(new NotComparable("hello"), "some other string");
+        System.out.println(bst2);
     }
 }
