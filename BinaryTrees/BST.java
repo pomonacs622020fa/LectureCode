@@ -36,7 +36,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
 
         // Pre-order style traversal
-        buffer.append(prefix + currentNode.value + " (" + currentNode.size + ")\n");
+        buffer.append(prefix + currentNode.value + "," + currentNode.key + " (" + currentNode.size + ")\n");
         if (currentNode.left != null && currentNode.right != null) {
             // (1) Both children
             buildString(currentNode.left, buffer, childPrefix + "├── ", childPrefix + "│   ");
@@ -135,6 +135,7 @@ public class BST<Key extends Comparable<Key>, Value> {
                 }
                 currentNode.right = delete(currentNode.right, successor.key);
                 currentNode.value = successor.value;
+                currentNode.key = successor.key;
             }
         }
 
