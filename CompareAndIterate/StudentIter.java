@@ -79,5 +79,11 @@ public class StudentIter implements Iterable<Integer> {
         }
 
         print_students(students);
+
+        Iterator<Integer> i1 = students.get(0).iterator();
+        while (i1.hasNext()) {
+            Integer i = i1.next();
+            System.out.println(i);
+        }
     }
 }

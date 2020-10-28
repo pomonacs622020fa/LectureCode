@@ -82,21 +82,26 @@ public class BST<Key extends Comparable<Key>, Value> {
             return new Node(key, value, 1);
         }
 
-        // Recursive cases
+        // Second base case when we are updating a node and not adding
         int compareResult = key.compareTo(currentNode.key);
-        if (compareResult < 0) {
-            // key is less than current key
-            currentNode.left = put(currentNode.left, key, value);
-            currentNode.size++;
-        } else if (compareResult > 0) {
-            // key is greater than current key
-            currentNode.right = put(currentNode.right, key, value);
-            currentNode.size++;
-        } else {
+        if (compareResult == 0) {
             // Found the key (no duplicates allowed here)
             currentNode.value = value;
+            return currentNode;
         }
 
+        // Else the two recursive cases
+        else if (compareResult < 0) {
+            // key is less than current key
+            currentNode.left = put(currentNode.left, key, value);
+        } else {
+            // key is greater than current key
+            currentNode.right = put(currentNode.right, key, value);
+        }
+
+        int leftSize = currentNode.left == null ? 0 : currentNode.left.size;
+        int rightSize = currentNode.right == null ? 0 : currentNode.right.size;
+        currentNode.size = 1 + leftSize + rightSize;
         return currentNode;
     }
 
