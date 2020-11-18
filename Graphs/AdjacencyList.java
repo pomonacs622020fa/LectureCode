@@ -134,13 +134,15 @@ public class AdjacencyList implements Graph {
         // g.BFS(0);
         g.DFS(0);
 
-        int numVertices = 8;
+        int numVertices = 5;
         g = new AdjacencyList(numVertices);
 
         Random rgen = new Random();
-        while (g.getNumEdges() < numVertices * 2.5) {
+        while (g.getNumEdges() < numVertices * 1.2) {
             int vFrom = rgen.nextInt(g.getNumVertices());
             int vTo = rgen.nextInt(g.getNumVertices());
+            if (vFrom == vTo)
+                continue;
             g.addEdge(vFrom, vTo);
         }
 
